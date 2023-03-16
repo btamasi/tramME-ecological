@@ -19,7 +19,7 @@ if (packageDescription("tramME")$Version < "1.0.3") {
 pkgs_out <- lapply(pkgs, library, character.only = TRUE, quietly = TRUE)
 
 
-## ----session-info, eval=do_report, include=do_report--------------------------
+## ----session-info, eval=TRUE, include=TRUE--------------------------
 ##' Additional information about the session.
 sessionInfo()
 date()
@@ -50,7 +50,7 @@ mc1 <- CoxphME(Time ~ Insects + Habitat + Landscape
 stopifnot(mc1$opt$convergence == 0)
 
 
-## ----rat1-summary, eval=do_report, include=do_report--------------------------
+## ----rat1-summary, eval=TRUE, include=TRUE--------------------------
 summary(mc1)
 
 
@@ -176,7 +176,7 @@ mc2 <- CoxphME(Time ~ Insects + Habitat + Landscape
 stopifnot(mc2$opt$convergence == 0)
 
 
-## ----rat2-summary, eval=do_report, include=do_report--------------------------
+## ----rat2-summary, eval=TRUE, include=TRUE--------------------------
 summary(mc2)
 
 
@@ -189,7 +189,7 @@ mc2_rc <- gam(time ~ Insects + Habitat + Landscape + Temperature
                family = cox.ph(), weights = event)
 
 
-## ----rats2-rc-summary, eval=do_report, include=do_report----------------------
+## ----rats2-rc-summary, eval=TRUE, include=TRUE----------------------
 summary(mc2_rc)
 
 
